@@ -15,12 +15,14 @@ def blink_all():
         GPIO.output("USR1", GPIO.HIGH)
         GPIO.output("USR2", GPIO.HIGH)
         GPIO.output("USR3", GPIO.HIGH)
+        print "LEDs ON"
         time.sleep(2)
 
         GPIO.output("USR0", GPIO.LOW)
         GPIO.output("USR1", GPIO.LOW)
         GPIO.output("USR2", GPIO.LOW)
         GPIO.output("USR3", GPIO.LOW)
+        print "LEDs OFF"
         time.sleep(2)
 
 
