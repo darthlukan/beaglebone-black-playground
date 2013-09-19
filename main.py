@@ -2,33 +2,26 @@ import time
 from Adafruit_BBIO import GPIO
 
 
-LEDS = {
-    "USR0": 53,
-    "USR1": 54,
-    "USR2": 55,
-    "USR3": 56
-}
-
-GPIO.setup(LEDS["USR0"], GPIO.OUT)
-GPIO.setup(LEDS["USR1"], GPIO.OUT)
-GPIO.setup(LEDS["USR2"], GPIO.OUT)
-GPIO.setup(LEDS["USR3"], GPIO.OUT)
+GPIO.setup("USR0", GPIO.OUT)
+GPIO.setup("USR1", GPIO.OUT)
+GPIO.setup("USR2", GPIO.OUT)
+GPIO.setup("USR3", GPIO.OUT)
 
 
 def blink_all():
     for i in range(0, 10):
 
-        GPIO.output(LEDS["USR0"], GPIO.HIGH)
-        GPIO.output(LEDS["USR1"], GPIO.HIGH)
-        GPIO.output(LEDS["USR2"], GPIO.HIGH)
-        GPIO.output(LEDS["USR3"], GPIO.HIGH)
+        GPIO.output("USR0", GPIO.HIGH)
+        GPIO.output("USR1", GPIO.HIGH)
+        GPIO.output("USR2", GPIO.HIGH)
+        GPIO.output("USR3", GPIO.HIGH)
         print "LEDs ON"
         time.sleep(2)
 
-        GPIO.output(LEDS["USR0"], GPIO.LOW)
-        GPIO.output(LEDS["USR1"], GPIO.LOW)
-        GPIO.output(LEDS["USR2"], GPIO.LOW)
-        GPIO.output(LEDS["USR3"], GPIO.LOW)
+        GPIO.output("USR0", GPIO.LOW)
+        GPIO.output("USR1", GPIO.LOW)
+        GPIO.output("USR2", GPIO.LOW)
+        GPIO.output("USR3", GPIO.LOW)
         print "LEDs OFF"
         time.sleep(2)
 
